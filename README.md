@@ -1,2 +1,2 @@
-# quero2-backend-technical-test
-quero2-backend-technical-test
+# adv-tech-techical-test
+adv-tech-techical-test
