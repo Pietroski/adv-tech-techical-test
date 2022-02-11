@@ -36,19 +36,19 @@ func (m *MockStore) EXPECT() *MockStoreMockRecorder {
 	return m.recorder
 }
 
-// CreateUser mocks base method.
-func (m *MockStore) CreateUser(arg0 context.Context, arg1 task.CreateUserParams) (task.Tasks, error) {
+// CreateTask mocks base method.
+func (m *MockStore) CreateTask(arg0 context.Context, arg1 task.CreateTaskParams) (task.Tasks, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "CreateUser", arg0, arg1)
+	ret := m.ctrl.Call(m, "CreateTask", arg0, arg1)
 	ret0, _ := ret[0].(task.Tasks)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
-// CreateUser indicates an expected call of CreateUser.
-func (mr *MockStoreMockRecorder) CreateUser(arg0, arg1 interface{}) *gomock.Call {
+// CreateTask indicates an expected call of CreateTask.
+func (mr *MockStoreMockRecorder) CreateTask(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateUser", reflect.TypeOf((*MockStore)(nil).CreateUser), arg0, arg1)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTask", reflect.TypeOf((*MockStore)(nil).CreateTask), arg0, arg1)
 }
 
 // DeleteTask mocks base method.
@@ -140,19 +140,19 @@ func (mr *MockStoreMockRecorder) GetTasksByUserID(arg0 interface{}) *gomock.Call
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTasksByUserID", reflect.TypeOf((*MockStore)(nil).GetTasksByUserID), arg0)
 }
 
-// ListPaginatedUsers mocks base method.
-func (m *MockStore) ListPaginatedUsers(arg0 context.Context, arg1 task.ListPaginatedUsersParams) ([]task.Tasks, error) {
+// ListPaginatedTasks mocks base method.
+func (m *MockStore) ListPaginatedTasks(arg0 context.Context, arg1 task.ListPaginatedTasksParams) ([]task.Tasks, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ListPaginatedUsers", arg0, arg1)
+	ret := m.ctrl.Call(m, "ListPaginatedTasks", arg0, arg1)
 	ret0, _ := ret[0].([]task.Tasks)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
-// ListPaginatedUsers indicates an expected call of ListPaginatedUsers.
-func (mr *MockStoreMockRecorder) ListPaginatedUsers(arg0, arg1 interface{}) *gomock.Call {
+// ListPaginatedTasks indicates an expected call of ListPaginatedTasks.
+func (mr *MockStoreMockRecorder) ListPaginatedTasks(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPaginatedUsers", reflect.TypeOf((*MockStore)(nil).ListPaginatedUsers), arg0, arg1)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPaginatedTasks", reflect.TypeOf((*MockStore)(nil).ListPaginatedTasks), arg0, arg1)
 }
 
 // ListTasks mocks base method.
