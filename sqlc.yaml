@@ -1,0 +1,26 @@
+version: "1"
+packages:
+  - name: "user"
+    path: "./internal/services/datasource/postgreSQL/user/"
+    queries: "./internal/services/datasource/postgreSQL/user/queries/"
+    schema: "./internal/services/datasource/postgreSQL/user/migrations/"
+    engine: "postgresql"
+    emit_prepared_queries: true
+    emit_interface: true
+    emit_exact_table_names: true
+    emit_empty_slices: true
+    emit_json_tags: true
+    json_tags_case_style: "camel"
+  - name: "task"
+    path: "./internal/services/datasource/postgreSQL/task/"
+    queries: "./internal/services/datasource/postgreSQL/task/queries/"
+    schema:
+      - "./internal/services/datasource/postgreSQL/task/migrations/"
+      - "./internal/services/datasource/postgreSQL/user/migrations/"
+    engine: "postgresql"
+    emit_prepared_queries: true
+    emit_interface: true
+    emit_exact_table_names: true
+    emit_empty_slices: true
+    emit_json_tags: true
+    json_tags_case_style: "camel"

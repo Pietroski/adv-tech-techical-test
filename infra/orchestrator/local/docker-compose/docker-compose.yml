@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  users-db:
+    image: postgres:14.1
+    container_name: user_database
+    environment:
+      - POSTGRES_DB=users_db
+      - POSTGRES_USER=user_manager
+      - POSTGRES_PASSWORD=user_manager
+    ports:
+      - "5430:5432"
+    volumes:
+      - ./.db/data/postgres/users:/var/lib/postgresql/data
+  tasks-db:
+    image: postgres:14.1
+    container_name: task_database
+    environment:
+      - POSTGRES_DB=tasks_db
+      - POSTGRES_USER=task_manager
+      - POSTGRES_PASSWORD=task_manager
+    ports:
+      - "5431:5432"
+    volumes:
+      - ./.db/data/postgres/tasks:/var/lib/postgresql/data
